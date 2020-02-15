@@ -19,7 +19,10 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('SignUp'),
+      ),
+      //backgroundColor: Colors.white,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -46,8 +49,8 @@ class _SignupScreenState extends State<SignupScreen> {
                 onChanged: (value) {
                   email = value;
                 },
-                decoration:
-                    kTextFieldDecoration.copyWith(hintText: 'Enter your email'),
+                decoration: kTextFieldDecorationSign.copyWith(
+                    hintText: 'Enter your email'),
               ),
               SizedBox(
                 height: 8.0,
@@ -58,7 +61,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 onChanged: (value) {
                   password = value;
                 },
-                decoration: kTextFieldDecoration.copyWith(
+                decoration: kTextFieldDecorationSign.copyWith(
                     hintText: 'Enter your password'),
               ),
               SizedBox(
@@ -66,7 +69,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               RoundedButton(
                 title: 'Register',
-                colour: Colors.blueAccent,
+                colour: kOrangeColor,
                 onPressed: () async {
                   setState(() {
                     showSpinner = true;

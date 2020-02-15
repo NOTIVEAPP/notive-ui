@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 //from input_page.dart
 const double kBottomContainerHeight = 80;
-const Color kButtonColor = Color(0xFFFB8C00);
-const Color kCardColorChosen = Color(0xFF64B5F6);
-const Color kCardColor = Color(0xFF7C4DFF);
-const Color kBottomContainerColor = Color(0xFFEB1555);
+const Color kOrangeColor = Color(0xFFFB8C00);
+const Color kLightBlueColor = Color(0xFF64B5F6);
+const Color kPurpleColor = Color(0xFF7C4DFF);
+const Color kRedColor = Color(0xFFEB1555);
 
 //from icon_content.dart
 const double iconSize = 70.0;
@@ -71,18 +71,34 @@ const kMessageContainerDecoration = BoxDecoration(
   ),
 );
 
-const kTextFieldDecoration = InputDecoration(
+const kTextFieldDecorationLog = InputDecoration(
   hintText: 'Enter a value',
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   border: OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
   enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.blueAccent, width: 1.0),
+    borderSide: BorderSide(color: kLightBlueColor, width: 1.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
   focusedBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.blueAccent, width: 2.0),
+    borderSide: BorderSide(color: kLightBlueColor, width: 2.0),
+    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+  ),
+);
+
+const kTextFieldDecorationSign = InputDecoration(
+  hintText: 'Enter a value',
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: kOrangeColor, width: 1.0),
+    borderRadius: BorderRadius.all(Radius.circular(32.0)),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderSide: BorderSide(color: kOrangeColor, width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
   ),
 );

@@ -19,7 +19,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('LogIn'),
+      ),
+      //backgroundColor: Colors.black,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -46,8 +49,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (value) {
                   email = value;
                 },
-                decoration:
-                    kTextFieldDecoration.copyWith(hintText: 'Enter your email'),
+                decoration: kTextFieldDecorationLog.copyWith(
+                    hintText: 'Enter your email'),
               ),
               SizedBox(
                 height: 8.0,
@@ -58,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (value) {
                   password = value;
                 },
-                decoration: kTextFieldDecoration.copyWith(
+                decoration: kTextFieldDecorationLog.copyWith(
                     hintText: 'Enter your password'),
               ),
               SizedBox(
@@ -66,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundedButton(
                 title: 'Log In',
-                colour: Colors.lightBlueAccent,
+                colour: kLightBlueColor,
                 onPressed: () async {
                   setState(() {
                     showSpinner = true;
@@ -85,6 +88,15 @@ class _LoginScreenState extends State<LoginScreen> {
 //                    print(e);
 //                  }
                 },
+              ),
+              Text(
+                'Forgot password?',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ],
           ),

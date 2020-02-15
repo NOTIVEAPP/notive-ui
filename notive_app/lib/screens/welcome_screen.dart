@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:notive_app/screens/constants.dart';
+import 'package:notive_app/screens/listview_screen.dart';
 import 'package:notive_app/screens/login_screen.dart';
+import 'package:notive_app/screens/settings_screen.dart';
+import 'package:provider/provider.dart';
 import 'package:notive_app/screens/signup_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:notive_app/components/rounded_button.dart';
+import 'dashboard_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -22,7 +27,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.black)
         .animate(controller);
     controller.forward();
     controller.addListener(() {
@@ -55,10 +60,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60.0,
                   ),
                 ),
+                SizedBox(
+                  width: 18.0,
+                ),
                 TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
+                  text: ['NOTIVE.'],
                   textStyle: TextStyle(
-                    fontSize: 45.0,
+                    fontSize: 50.0,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
@@ -69,16 +77,23 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
             RoundedButton(
               title: 'Log In',
-              colour: Colors.lightBlueAccent,
+              colour: kLightBlueColor,
               onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
             ),
             RoundedButton(
-              title: 'Register',
-              colour: Colors.blueAccent,
+              title: 'Sign Up',
+              colour: kOrangeColor,
               onPressed: () {
                 Navigator.pushNamed(context, SignupScreen.id);
+              },
+            ),
+            RoundedButton(
+              title: 'TEST',
+              colour: Colors.red,
+              onPressed: () {
+                Navigator.pushNamed(context, ListViewScreen.id);
               },
             ),
           ],
