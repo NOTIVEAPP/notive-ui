@@ -19,17 +19,14 @@ class Dashboard extends StatelessWidget {
           shrinkWrap: true,
           itemBuilder: (context, index) {
             return Container(
-              child: Center(
-//              child: Container(
-//                color: Colors.red,
-//                width: 48.0,
-//                height: 48.0,
-//              ),
-                child: ReusableListCard(
-                  color: RandomColor().randomColor(),
-                  listName: listData.lists[index].listName,
-                  //TODO add Function onPress here
-                  onPress: openListView,
+              child: SingleChildScrollView(
+                child: Center(
+                  child: ReusableListCard(
+                    color: RandomColor().randomColor(),
+                    listName: listData.lists[index].listName,
+                    //TODO add Function onPress here
+                    onPress: openListView,
+                  ),
                 ),
               ),
             );
