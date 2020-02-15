@@ -27,10 +27,9 @@ void main() {
 
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => ItemData()),
+        ChangeNotifierProvider(create: (context) => ListData()),
         Provider(create: (context) => ListViewScreen()),
-
-        //Provider(create: (context) => Dashboard()),
+        Provider(create: (context) => Dashboard()),
       ],
       child: NotiveApp(),
     ),

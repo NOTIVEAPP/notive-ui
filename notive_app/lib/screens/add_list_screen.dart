@@ -11,7 +11,7 @@ class AddListScreen extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          //color: Colors.white,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(40.0),
             topLeft: Radius.circular(40.0),

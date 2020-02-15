@@ -9,11 +9,11 @@ class AddItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     String newItemString;
     return Container(
-      color: Colors.black54,
+      //color: Colors.black54,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
         decoration: BoxDecoration(
-          color: Colors.black,
+          //color: Colors.black,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(40.0),
             topLeft: Radius.circular(40.0),

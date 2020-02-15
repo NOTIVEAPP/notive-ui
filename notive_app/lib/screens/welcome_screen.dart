@@ -93,7 +93,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               title: 'TEST',
               colour: Colors.red,
               onPressed: () {
-                Navigator.pushNamed(context, ListViewScreen.id);
+                Navigator.pushNamed(context, DashboardScreen.id);
               },
             ),
           ],

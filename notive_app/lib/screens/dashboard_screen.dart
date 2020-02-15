@@ -56,19 +56,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
             children: <Widget>[
               DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.black,
-                ),
+                    //color: Colors.black,
+                    ),
                 child: Text(
                   'MENU',
                   style: TextStyle(
-                    color: Colors.white,
+                    //color: Colors.white,
                     fontSize: 24,
                   ),
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.map),
-                title: Text('Map'),
+                leading: Icon(
+                  Icons.map,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Map',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
                 onTap: () {
                   //why is this giving an error?
@@ -79,8 +85,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.view_list),
-                title: Text('Lists'),
+                leading: Icon(
+                  Icons.view_list,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Lists',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
                 onTap: () {
                   //why is this giving an error?
@@ -91,8 +103,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.playlist_add_check),
-                title: Text('Archived Lists'),
+                leading: Icon(
+                  Icons.playlist_add_check,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Archived Lists',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
                 onTap: () {
                   //why is this giving an error?
@@ -104,8 +122,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.account_circle),
-                title: Text('Account'),
+                leading: Icon(
+                  Icons.account_circle,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Account',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
                 onTap: () {
                   //why is this giving an error?
@@ -116,8 +140,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
+                leading: Icon(
+                  Icons.settings,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Settings',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
                 onTap: () {
                   //why is this giving an error?
@@ -128,8 +158,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.exit_to_app),
-                title: Text('Log Out'),
+                leading: Icon(
+                  Icons.exit_to_app,
+                  color: kOrangeColor,
+                ),
+                title: Text(
+                  'Log Out',
+                  style: TextStyle(color: kOrangeColor),
+                ),
                 selected: true,
               ),
             ],
@@ -141,7 +177,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          backgroundColor: kOrangeColor,
+          child: Icon(
+            Icons.add,
+            color: Colors.black,
+          ),
           // color: Colors.orangeAccent,
           elevation: 5.0,
           onPressed: () async {
