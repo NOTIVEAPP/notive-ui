@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notive_app/models/list_data.dart';
+import 'package:notive_app/models/notive_model.dart';
 import 'package:provider/provider.dart';
 
 class AddListScreen extends StatelessWidget {
@@ -44,7 +44,7 @@ class AddListScreen extends StatelessWidget {
               ),
               color: Colors.lightBlueAccent,
               onPressed: () {
-                Provider.of<ListData>(context, listen: false)
+                Provider.of<NotiveModel>(context, listen: false)
                     .addList(newListName);
                 Navigator.pop(context);
               },

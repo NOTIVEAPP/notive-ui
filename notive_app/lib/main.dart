@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:notive_app/models/item_data.dart';
+import 'package:notive_app/models/list_model.dart';
 import 'package:notive_app/screens/archived_lists_screen.dart';
 import 'package:notive_app/screens/settings_screen.dart';
-import 'models/list_data.dart';
+import 'models/notive_model.dart';
 import 'package:provider/provider.dart';
 import 'package:notive_app/screens/profile_screen.dart';
 import 'package:notive_app/screens/welcome_screen.dart';
@@ -12,24 +12,15 @@ import 'package:notive_app/screens/dashboard_screen.dart';
 import 'package:notive_app/screens/listview_screen.dart';
 import 'components/dashboard.dart';
 
+//import 'package:http/http.dart' as http;
+
 void main() {
   runApp(
-//    MultiProvider(
-//      providers: [
-//        Provider(create: (context) => Dashboard()),
-//        Consumer<Dashboard>(
-//          builder: (context, dashboard),
-//        )
-//
-//      ]
-//
-//    )
-
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => ListData()),
-        Provider(create: (context) => ListViewScreen()),
-        Provider(create: (context) => Dashboard()),
+        ChangeNotifierProvider<NotiveModel>(create: (context) => NotiveModel()),
+        ChangeNotifierProvider<ListModel>(create: (context) => ListModel()),
+        //Provider(create: (context) => Dashboard()),
       ],
       child: NotiveApp(),
     ),

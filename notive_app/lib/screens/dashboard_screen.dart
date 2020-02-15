@@ -5,7 +5,7 @@ import 'package:notive_app/screens/constants.dart';
 import 'package:notive_app/screens/profile_screen.dart';
 import 'add_item_screen.dart';
 import 'add_list_screen.dart';
-import 'package:notive_app/models/list_data.dart';
+import 'package:notive_app/models/notive_model.dart';
 import 'package:provider/provider.dart';
 import 'package:notive_app/components/custom_drawer.dart';
 import 'package:notive_app/screens/settings_screen.dart';
@@ -190,7 +190,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               print(listName);
               if (listName != null) {
                 //Create reusable list card
-                Provider.of<ListData>(context, listen: false).addList(listName);
+                Provider.of<NotiveModel>(context, listen: false)
+                    .addList(listName);
                 //Navigator.pop(context);
               }
             });

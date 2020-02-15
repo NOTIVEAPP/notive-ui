@@ -4,7 +4,7 @@ import 'package:notive_app/screens/archived_lists_screen.dart';
 import 'package:notive_app/screens/listview_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:random_color/random_color.dart';
-import 'package:notive_app/models/list_data.dart';
+import 'package:notive_app/models/notive_model.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class Dashboard extends StatelessWidget {
       Navigator.pushNamed(context, ListViewScreen.id);
     }
 
-    return Consumer<ListData>(
+    return Consumer<NotiveModel>(
       builder: (context, listData, child) {
         return ListView.builder(
           shrinkWrap: true,
