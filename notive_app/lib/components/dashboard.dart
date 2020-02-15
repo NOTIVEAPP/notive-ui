@@ -12,14 +12,13 @@ class Dashboard extends StatelessWidget {
     void openListView() {
       Navigator.pushNamed(context, ListViewScreen.id);
     }
-
     return Consumer<NotiveModel>(
       builder: (context, listData, child) {
         return GridView.count(
           crossAxisCount: 2,
           children: List.generate(listData.listsCount, (index){
             return ReusableListCard(
-                    color: RandomColor().randomColor(),
+                    color: listData.lists[index].color ,
                     listName: listData.lists[index].listName,
                     //TODO add Function onPress here
                     onPress: openListView,
@@ -42,7 +41,6 @@ class Dashboard extends StatelessWidget {
 //                 ),
 //               ),
 //             );
-
 // //              ReusableListCard(
 // //              color: RandomColor().randomColor(),
 // //              listName: listData.lists[index].listName,
